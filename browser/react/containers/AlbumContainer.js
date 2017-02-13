@@ -5,13 +5,18 @@ import {connect} from 'react-redux';
 
 
 function mapStateToProps(state){ 
-  return {selectedAlbum: state.albums.selected, player: state.player}; 
+  return {
+    selectedAlbum: state.albums.selected, 
+    player: state.player
+  }; 
 }
 
 function mapDispatchToProps(dispatch){
-  return {toggleOne: 
-    function toggle(song, list){
-      dispatch(toggleSong(song, list))}}
+  return {
+    toggleOne: function toggle(song, list){
+      dispatch(toggleSong(song, list))
+    }
+  }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Album); 

@@ -5,6 +5,9 @@ export default function (props) {
 
   const playlists = props.playlists;
 
+  console.log("PROPS", props); 
+  console.log("PLAYLISTS", playlists)
+
   return (
     <sidebar>
       <img src="juke.svg" className="logo"/>
