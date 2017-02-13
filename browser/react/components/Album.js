@@ -3,11 +3,14 @@ import Songs from '../components/Songs';
 
 export default function (props) {
 
+  console.log("ALBUM PROPS", props); 
+
   const album = props.selectedAlbum;
-  const currentSong = props.currentSong;
-  const isPlaying = props.isPlaying;
+  const currentSong = props.player.currentSong;
+  const isPlaying = props.player.isPlaying;
   const toggleOne = props.toggleOne;
 
+  console.log("ALBUM", album); 
   return (
     <div className="album">
       <div>
