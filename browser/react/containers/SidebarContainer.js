@@ -29,8 +29,9 @@ import {connect} from 'react-redux';
 // }
 
 function mapStateToProps(state){ 
+console.log("STATE", state); 
   return {
-    playlists: state.list, 
+    playlists: state.playlists.list
   }; 
 }
 
