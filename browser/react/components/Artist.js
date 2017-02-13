@@ -2,10 +2,17 @@ import React from 'react';
 import {Link} from 'react-router';
 
 export default function (props) {
+  console.log("PROPS", props); 
 
   const artist = props.selectedArtist;
-  const albums = artist.albums || [];
-  const songs = artist.songs || [];
+  const songs = props.selectedArtist.songs; 
+  const albums = props.selectedArtist.albums; 
+  const toggleOne = props.toggleOne; 
+  const isPlaying = props.isPlaying;
+  const currentSong = props.currentSong;
+
+  console.log("SONGS", songs); 
+
 
   return (
     <div>
